@@ -77,6 +77,7 @@ plotDist(dist='t', df=2, col="blue")
 * Lalu masukkan rumus untuk melakukan Uji Statistik (df=2) ```plotDist(dist='t', df=2, col="blue")```  
 **Bukti**  
 ![3c.png](https://drive.google.com/uc?export=view&id=1pMa_2p8tVNns5yzq1DgQMpjciZggp2QB)  
+
 **D**  
 **Jawab**  
 ```R  
