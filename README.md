@@ -74,6 +74,9 @@ tsum.test(mean.x=3.64, s.x = 1.67, n.x = 19,
           alternative = "greater", var.equal = TRUE)
 ```  
 **Keterangan**  
+* Install terlebih dahulu library ```BSDA``` sebagai berikut: ```install.packages("BSDA")```  
+* Setelah menginstall library ```mosaic``` definisikan library ```BSDA``` sebagai berikut: ```library(BSDA)```.  
+* Masukkan rumus untuk menghitung sample statistik.  
 **Bukti**  
 ![3b.png](https://drive.google.com/uc?export=view&id=1PD4u0iSUk7UqnanVFycZbkDEVnqu1iQm)
 **C. Lakukan Uji Statistik (df =2)**  
