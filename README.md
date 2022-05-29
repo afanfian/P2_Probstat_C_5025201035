@@ -35,25 +35,18 @@ mengkonsumsi obat 𝐴 pada tingkat signifikansi 5%.
 ## Soal No 2  
 **A**  
 **Jawab**  
-```R  
-
-```  
-**Keterangan**  
-**Bukti**  
 **B**  
 **Jawab**  
 ```R  
-
+zsum.test(mean.x=23500, sigma.x = 3900, n.x = 100,  
+          alternative = "greater", mu = 20000,
+          conf.level = 0.95)
 ```  
 **Keterangan**  
 **Bukti**  
+![2b.png](https://drive.google.com/uc?export=view&id=1dIP2cZrWoj9IEXiLXisHLkVFVIHv1Qag)
 **C**  
-```R  
-
-```  
 **Jawab**  
-**Keterangan**  
-**Bukti**  
 ## Soal No 3  
 **A**  
 **Jawab**  
