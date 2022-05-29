@@ -12,7 +12,7 @@ sd(x-y)
 ```  
 **Keterangan**  
 Berdasarkan perhitungan diperoleh nilai standar deviasi dari data selisih pasangan 
-pengamatan, yakni = 6,35959468 atau 6,360
+pengamatan, yakni = 6,35959468 atau 6,360.  
 **Bukti**  
 ![1a.png](https://drive.google.com/uc?export=view&id=1GhMP5Jr4WfKu0rDjdGynFc7Fv7J5uLrv)
 **B**  
@@ -22,7 +22,7 @@ t.test (y , x , paired=TRUE)
 ```  
 **Keterangan**  
 Diketahui nilai statistik dari uji 𝑡 (𝑡) adalah 7,6525, sementara nilai 
-probabilitas (p-value) adalah 0,00006003 (atau 6.003e-05).
+probabilitas (p-value) adalah 0,00006003 (atau 6.003e-05).  
 **Bukti**  
 ![1b.png](https://drive.google.com/uc?export=view&id=1p6rvkwgxuThpyv1soP1QxVcqkFdtpHFs)
 **C**  
