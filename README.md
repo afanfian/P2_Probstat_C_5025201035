@@ -147,7 +147,6 @@ didapatkan? , Apa hipotesis dan kesimpulan yang dapat diambil ?**
 ```R  
 bartlett.test(Length ~ Group, data = dataoneway)
 ```  
-**Keterangan**  
 **Bukti**  
 ![4b.png](https://drive.google.com/uc?export=view&id=1jFPTGqQ95700mz5_7q2ByfLcoQ0h2eD9)  
 **C. Untuk uji ANOVA (satu arah), buatlah model linier dengan Panjang versus
@@ -157,7 +156,6 @@ Grup dan beri nama model tersebut model 1.**
 model1 = lm(Length ~ Group, data = dataoneway)
 anova(model1)
 ```  
-**Keterangan**  
 **Bukti**  
 ![4c1.png](https://drive.google.com/uc?export=view&id=1FyWjdytdE6EB2iLwfVpTPz3uCmwEauZV)  
 ![4c2.png](https://drive.google.com/uc?export=view&id=1Exq7wSI_zW_iIQTdx1ybbcnIuPKWIhVX)  
@@ -167,7 +165,6 @@ dari H0?**
 ```R
 TukeyHSD(aov(model1))
 ```  
-**Keterangan**  
 **Bukti**  
 ![4d.png](https://drive.google.com/uc?export=view&id=1yecpZxMzSQsHskk3cclxk1crFhooTOHY)  
 **E. Verifikasilah jawaban model 1 dengan Post-hoc test Tukey HSD, dari nilai p
