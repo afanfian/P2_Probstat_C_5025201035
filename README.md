@@ -128,10 +128,7 @@ Grup dan beri nama model tersebut model 1.**
 **Bukti**  
 **D. Dari Hasil Poin C, Berapakah nilai-p ? , Apa yang dapat Anda simpulkan
 dari H0?**  
-**Jawab**  
-```R  
-
-```  
+**Jawab** 
 **Keterangan**  
 **Bukti**  
 **E. Verifikasilah jawaban model 1 dengan Post-hoc test Tukey HSD, dari nilai p
@@ -152,38 +149,100 @@ yang didapatkan apakah satu jenis kucing lebih panjang dari yang lain? Jelaskan*
 ## Soal No 5  
 **A. Buatlah plot sederhana untuk visualisasi data**  
 **Jawab**  
+* Install terlebih dahulu untuk ```multcompView``` nya.  
 ```R  
-
+install.packages("multcompView")
 ```  
-**Keterangan**  
+* Setelah menginstall ```multcompView``` silahkan mengerun beberapa library dibawah ini dan jangan langsung mengeksekusi programnya.  
+```R  
+library(readr)
+library(ggplot2)
+library(multcompView)
+library(dplyr)
+```  
+* Selanjutnya membaca file GTL.csv dari documents.  
+```R
+GTL <- read_csv("GTL.csv")
+head(GTL)
+```  
+* Selanjutnya, kita melakukan observasi pada data.  
+```R
+str(GTL)
+```  
+* Yang terakhir, kita melakukan visualisasi menggunakan ```simple plot```.  
+```R
+qplot(x = Temp, y = Light, geom = "point", data = GTL) +
+  facet_grid(.~Glass, labeller = label_both)
+```  
 **Bukti**  
+* Membaca file ```GTL.csv```.  
+![5a1.png](https://drive.google.com/uc?export=view&id=1TTL1uX03OMp3RZMWEzBTAtNEq_VLY-YI)  
+* Melakukan observasi data.  
+![5a2.png](https://drive.google.com/uc?export=view&id=1mbNUIyXoqKQNLhftrqQrxavG-NQwz091)  
+* Visualisasi menggunakan ```simple plot```.  
+![5a3.png](https://drive.google.com/uc?export=view&id=1UbNYK2cHmzA5tOvtQ_adbY299fqWRX3T)  
+
 **B. Lakukan uji ANOVA dua arah**  
 **Jawab**  
+* Membuat variabel ```as factor``` sebagai ```ANOVA```  
 ```R  
-
+GTL$Glass <- as.factor(GTL$Glass)
+GTL$Temp_Factor <- as.factor(GTL$Temp)
+str(GTL)
 ```  
-**Keterangan**  
+* Melakukan ```analisis of variance```:  
+```R
+anova <- aov(Light ~ Glass*Temp_Factor, data = GTL)
+summary(anova)
+```  
+
 **Bukti**  
+* Membuat variabel ```as factor``` sebagai ```ANOVA```  
+![5b1.png](https://drive.google.com/uc?export=view&id=1g-mFWbOwg9P8Ln22AAmD1EBadFdNANgC)  
+* Melakukan ```analisis of variance```:  
+![5b2.png](https://drive.google.com/uc?export=view&id=1utSEHh_czTGYDe7YfCRhfrHSxGnSI9b8)  
+
 **C. Tampilkan tabel dengan mean dan standar deviasi keluaran cahaya untuk
 setiap perlakuan (kombinasi kaca pelat muka dan suhu operasi)**  
 **Jawab**  
+* Melakukan ```summarise``` dengan menggunakan cara ```group_by``` sesuai dengan mean dan standar deviasi yang berlaku, sebagai berikut:  
 ```R  
-
+data_summary <- group_by(GTL, Glass, Temp) %>%
+  summarise(mean=mean(Light), sd=sd(Light)) %>%
+  arrange(desc(mean))
+print(data_summary)
 ```  
-**Keterangan**  
 **Bukti**  
-**D. Lakukan uji Tukey**  
+![5C.png](https://drive.google.com/uc?export=view&id=1qJmRfw8KhR0YTuSEBc0d8qzFk7pGSRkQ)  
+
+**D. Lakukan uji Tukey** 
+* Menggunakan fungsi ```TukeyHSD``` sebagai berikut:  
 **Jawab**  
 ```R  
-
+tukey <- TukeyHSD(anova)
+print(tukey)
 ```  
 **Keterangan**  
+* Menggunakan fungsi ```TukeyHSD``` dan mengeprint ```tukey```.  
 **Bukti**  
+![5d.png](https://drive.google.com/uc?export=view&id=1xWx9nCvacIXkJkI7bkHGTxJMsRcCeWoa)
 **E. Gunakan compact letter display untuk menunjukkan perbedaan signifikan
 antara uji Anova dan uji Tukey**  
 **Jawab**  
+* Membuat ```compact letter```.  
 ```R  
-
+tukey.cld <- multcompLetters4(anova, tukey)
+print(tukey.cld)
+```  
+* Menambahkan ```compact letter display``` kedalam tabel dengan menggunakan ```means``` atau rata-rata dan sd.  
+```R  
+cld <- as.data.frame.list(tukey.cld$`Glass:Temp_Factor`)
+data_summary$Tukey <- cld$Letters
+print(data_summary)
 ```  
 **Keterangan**  
 **Bukti**  
+* Membuat ```compact letter```.  
+![5e1.png](https://drive.google.com/uc?export=view&id=1DWt7R0NOMNr0_fZmFE9dCxskOIZsjyjl)  
+* Menambahkan ```compact letter display```.  
+![5e2.png](https://drive.google.com/uc?export=view&id=11rw8u6VBuW4BcXEBJHfcy4mx61GFp1nI)
