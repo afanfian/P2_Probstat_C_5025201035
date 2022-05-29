@@ -50,46 +50,48 @@ zsum.test(mean.x=23500, sigma.x = 3900, n.x = 100,
 ## Soal No 3  
 **A**  
 **Jawab**  
-```R  
-
-```  
-**Keterangan**  
-**Bukti**  
 **B**  
 **Jawab**  
 ```R  
+install.packages("BSDA")
+library(BSDA)
 
+tsum.test(mean.x=3.64, s.x = 1.67, n.x = 19, 
+          mean.y =2.79 , s.y = 1.32, n.y = 27, 
+          alternative = "greater", var.equal = TRUE)
 ```  
 **Keterangan**  
 **Bukti**  
+![3b.png](https://drive.google.com/uc?export=view&id=1PD4u0iSUk7UqnanVFycZbkDEVnqu1iQm)
 **C**  
 **Jawab**  
 ```R  
+install.packages("mosaic")
+library(mosaic)
 
+plotDist(dist='t', df=2, col="blue")
 ```  
 **Keterangan**  
+* Install terlebih dahulu library ```mosaic``` sebagai berikut: ```install.packages("mosaic")```  
+* Setelah menginstall library ```mosaic``` definisikan library ```mosaic``` sebagai berikut: library(mosaic).  
+* Lalu masukkan rumus untuk melakukan Uji Statistik (df=2) ```plotDist(dist='t', df=2, col="blue")```  
 **Bukti**  
+![3c.png](https://drive.google.com/uc?export=view&id=1pMa_2p8tVNns5yzq1DgQMpjciZggp2QB)
 **D**  
 **Jawab**  
 ```R  
-
+qchisq(p = 0.05, df = 2, lower.tail=FALSE)
 ```  
 **Keterangan**  
+* Nilai kritikal Adapun untuk mendapatkan nilai kritikal bisa menggunakan ```qchisq``` dengan ```df=2``` sesuai soal sebelumnya.  
 **Bukti**  
+![3d.png](https://drive.google.com/uc?export=view&id=17xj0zievfeVvG5pVHTsW8_Ao8oT5vlNn)
 **E**  
 **Jawab**  
-```R  
-
-```  
-**Keterangan**  
-**Bukti**  
+* Teori keputusan merupakan teori formal yang berfungsi untuk pengambilan keputusan di bawah ketidakpastian. Sebagai contoh aksinya adalah : ```({a}_{a∈A})``` dan kemungkinan konsekuensi : ```({c}_{c∈C})``` ```tergantung pada keadaan dan tindakan```. Maka keputusan dapat dibuat dengan melakukan ```t.test```.  
 **F**  
 **Jawab**  
-```R  
-
-```  
-**Keterangan**  
-**Bukti**  
+* Kesimpulan Kesimpulan yang didapatkan yaitu perbedaan rata-rata yang terjadi tidak ada jika dilihat dari uji statistik dan akan ada tetapi tidak signifikan jika dipengaruhi nilai kritikal.  
 ## Soal No 4  
 **A**  
 **Jawab**  
