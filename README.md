@@ -158,6 +158,7 @@ qqline(group1$Length)
 dari H0?**  
 **Jawab**  
 * Mendapatkan nilai ```-p``` atau ```p-value``` sebesar 0.8054.  
+
 **Keterangan**  
 **E. Verifikasilah jawaban model 1 dengan Post-hoc test Tukey HSD, dari nilai p
 yang didapatkan apakah satu jenis kucing lebih panjang dari yang lain? Jelaskan**  
