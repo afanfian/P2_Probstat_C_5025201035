@@ -113,11 +113,29 @@ qchisq(p = 0.05, df = 2, lower.tail=FALSE)
 2,grup 3). Lalu Gambarkan plot kuantil normal untuk setiap kelompok dan
 lihat apakah ada outlier utama dalam homogenitas varians.**  
 **Jawab**  
+* Mengambil data dari link yang telah disediakan ```https://rstatisticsandresearch.weebly.com/uploads/1/0/2/6/1026585/onewayanova.txt```.  
 ```R  
-
+myFile  <- read.table(url("https://rstatisticsandresearch.weebly.com/uploads/1/0/2/6/1026585/onewayanova.txt")) 
+dim(myFile)
+head(myFile)
 ```  
-**Keterangan**  
+* Membuat ```myFile``` secara ```group```.  
+```R
+myFile$Group <- as.factor(myFile$Group)
+myFile$Group = factor(myFile$Group,labels = c("Kucing Oren","Kucing Hitam","Kucing Putih"))
+```  
+* Mengecek apakah program tersebut menyimpan nilai secara ```group```.  
+```R  
+class(myFile$Group)
+```  
+* Membagi valuer menjadi 3 bagian ke dalam 3 ```group```.  
+```R
+group1 <- subset(myFile, Group=="Kucing Oren")
+group2 <- subset(myFile, Group=="Kucing Hitam")
+group3 <- subset(myFile, Group=="Kucing Putih")
+```  
 **Bukti**  
+![4a.png](https://drive.google.com/uc?export=view&id=1xdf19X_WGv1IqmSFIiR3CUjqSP1e1sVX)  
 **B. Carilah atau periksalah Homogeneity of variances nya , Berapa nilai p yang
 didapatkan? , Apa hipotesis dan kesimpulan yang dapat diambil ?**  
 **Jawab**  
