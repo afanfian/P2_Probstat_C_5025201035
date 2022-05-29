@@ -62,8 +62,10 @@ zsum.test(mean.x=23500, sigma.x = 3900, n.x = 100,
 ## Soal No 3  
 **A. H0 dan H1**  
 **Jawab**  
-H0: miu1 = miu2 (rata-rata saham di Bandung sama dengan di Bali)
-H1: miu1 != miu2 (rata-rata saham di Bandung tidak sama dengan di Bali)
+```R
+H0: miu1 = miu2 
+H1: miu1 != miu2 
+```  
 **Keterangan**  
 * H0: miu1 = miu2 (rata-rata saham di Bandung sama dengan di Bali)  
 * H1: miu1 != miu2 (rata-rata saham di Bandung tidak sama dengan di Bali)
