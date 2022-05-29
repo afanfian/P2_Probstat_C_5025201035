@@ -3,7 +3,7 @@
 |:-------------:| :-----:|
 | Fian Awamiry Maulana | 5025201035 |  
 
-**Note: Jika gambar tidak muncul saat reload, bisa melihat pada folder dokumentasi** 
+**Note: Jika bukti/gambar tidak muncul saat reload, bisa melihat pada folder dokumentasi** 
 ## Soal No 1  
 **A. Kesimpulan Kesimpulan yang didapatkan yaitu perbedaan rata-rata yang terjadi tidak ada jika dilihat dari uji statistik dan akan ada tetapi tidak signifikan jika dipengaruhi nilai kritikal.**  
 **Jawab**  
