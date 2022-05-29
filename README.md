@@ -73,7 +73,7 @@ plotDist(dist='t', df=2, col="blue")
 ```  
 **Keterangan**  
 * Install terlebih dahulu library ```mosaic``` sebagai berikut: ```install.packages("mosaic")```  
-* Setelah menginstall library ```mosaic``` definisikan library ```mosaic``` sebagai berikut: library(mosaic).  
+* Setelah menginstall library ```mosaic``` definisikan library ```mosaic``` sebagai berikut: ```library(mosaic)```.  
 * Lalu masukkan rumus untuk melakukan Uji Statistik (df=2) ```plotDist(dist='t', df=2, col="blue")```  
 **Bukti**  
 ![3c.png](https://drive.google.com/uc?export=view&id=1pMa_2p8tVNns5yzq1DgQMpjciZggp2QB)
@@ -85,10 +85,12 @@ qchisq(p = 0.05, df = 2, lower.tail=FALSE)
 **Keterangan**  
 * Nilai kritikal Adapun untuk mendapatkan nilai kritikal bisa menggunakan ```qchisq``` dengan ```df=2``` sesuai soal sebelumnya.  
 **Bukti**  
-![3d.png](https://drive.google.com/uc?export=view&id=17xj0zievfeVvG5pVHTsW8_Ao8oT5vlNn)
+![3d.png](https://drive.google.com/uc?export=view&id=17xj0zievfeVvG5pVHTsW8_Ao8oT5vlNn)  
+
 **E**  
 **Jawab**  
 * Teori keputusan merupakan teori formal yang berfungsi untuk pengambilan keputusan di bawah ketidakpastian. Sebagai contoh aksinya adalah : ```({a}_{a∈A})``` dan kemungkinan konsekuensi : ```({c}_{c∈C})``` ```tergantung pada keadaan dan tindakan```. Maka keputusan dapat dibuat dengan melakukan ```t.test```.  
+
 **F**  
 **Jawab**  
 * Kesimpulan Kesimpulan yang didapatkan yaitu perbedaan rata-rata yang terjadi tidak ada jika dilihat dari uji statistik dan akan ada tetapi tidak signifikan jika dipengaruhi nilai kritikal.  
