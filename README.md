@@ -171,8 +171,7 @@ TukeyHSD(aov(model1))
 **Bukti**  
 ![4d.png](https://drive.google.com/uc?export=view&id=1yecpZxMzSQsHskk3cclxk1crFhooTOHY)  
 **E. Verifikasilah jawaban model 1 dengan Post-hoc test Tukey HSD, dari nilai p
-yang didapatkan apakah satu jenis kucing lebih panjang dari yang lain? Jelaskan**  
-**F. Visualisasikan data dengan ggplot2**  
+yang didapatkan apakah satu jenis kucing lebih panjang dari yang lain? Jelaskan** dan **F. Visualisasikan data dengan ggplot2**  
 **Jawab**  
 ```R  
 # E & F
@@ -190,7 +189,7 @@ ggplot(dataoneway, aes(x = Group, y = Length)) +
 * Masukkan Visualisasi data dan model 1.  
 
 **Bukti**  
-![4e.png](https://drive.google.com/uc?export=view&id=1nhpbl0ys2WZ3JbvoeHcQ8V4qPV2QGuy)  
+![4e.png](https://drive.google.com/uc?export=view&id=1nhpbl0ys2WZ3JbvoeHcQ8V4qPV2QGuy-)  
 ## Soal No 5  
 **A. Buatlah plot sederhana untuk visualisasi data**  
 **Jawab**  
