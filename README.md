@@ -1,0 +1,101 @@
+# P2_Probstat_C_5025201035
+| Nama  | NRP |
+|:-------------:| :-----:|
+| Fian Awamiry Maulana | 5025201035 |
+## Soal No 1  
+**A**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
+**B**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
+**C**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
+## Soal No 2  
+**A**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
+**B**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
+**C**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
+## Soal No 3  
+**A**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
+**B**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
+**C**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
+**D**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
+**E**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
+**F**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
+## Soal No 4  
+**A**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
+**B**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
+**C**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
+**D**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
+**E**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
+**F**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
+## Soal No 5  
+**A**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
+**B**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
+**C**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
+**D**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
+**E**  
+**Jawab**  
+**Keterangan**  
+**Bukti**  
