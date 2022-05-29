@@ -55,9 +55,13 @@ zsum.test(mean.x=23500, sigma.x = 3900, n.x = 100,
 ![2b.png](https://drive.google.com/uc?export=view&id=1dIP2cZrWoj9IEXiLXisHLkVFVIHv1Qag)
 **C. Buatlah kesimpulan berdasarkan P-Value yang dihasilkan!**  
 **Jawab**  
+* Kesimpulan yang didapat adalah bahwa mobil dikemudikan rata-rata lebih dari 20.000 kilometer per tahun.  
+**Bukti**
+![2c.jpg](https://drive.google.com/uc?export=view&id=1AulpLUXyy0YI-ybml67iB966p1XHjJ0W)
 ## Soal No 3  
 **A. H0 dan H1**  
 **Jawab**  
+![3a.jpg](https://drive.google.com/uc?export=view&id=1B1wDlKeXTSeOqwRPzmAz2Kt7DVs6PX3-)
 **B. Hitung Sampel Statistik**  
 **Jawab**  
 ```R  
