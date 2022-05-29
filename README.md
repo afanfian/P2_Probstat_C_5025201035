@@ -224,6 +224,7 @@ print(tukey)
 ```  
 **Keterangan**  
 * Menggunakan fungsi ```TukeyHSD``` dan mengeprint ```tukey```.  
+
 **Bukti**  
 ![5d.png](https://drive.google.com/uc?export=view&id=1xWx9nCvacIXkJkI7bkHGTxJMsRcCeWoa)  
 
@@ -241,7 +242,6 @@ cld <- as.data.frame.list(tukey.cld$`Glass:Temp_Factor`)
 data_summary$Tukey <- cld$Letters
 print(data_summary)
 ```  
-**Keterangan**  
 **Bukti**  
 * Membuat ```compact letter```.  
 ![5e1.png](https://drive.google.com/uc?export=view&id=1DWt7R0NOMNr0_fZmFE9dCxskOIZsjyjl)  
