@@ -3,7 +3,7 @@
 |:-------------:| :-----:|
 | Fian Awamiry Maulana | 5025201035 |
 ## Soal No 1  
-**A**  
+**A. Kesimpulan Kesimpulan yang didapatkan yaitu perbedaan rata-rata yang terjadi tidak ada jika dilihat dari uji statistik dan akan ada tetapi tidak signifikan jika dipengaruhi nilai kritikal.**  
 **Jawab**  
 ```R  
 x <- c(78,75,67,77,70,72,78,74,77)
@@ -15,7 +15,7 @@ Berdasarkan perhitungan diperoleh nilai standar deviasi dari data selisih pasang
 pengamatan, yakni = 6,35959468 atau 6,360.  
 **Bukti**  
 ![1a.png](https://drive.google.com/uc?export=view&id=1GhMP5Jr4WfKu0rDjdGynFc7Fv7J5uLrv)
-**B**  
+**B. Carilah nilai t (p-value)**  
 **Jawab**  
 ```R  
 t.test (y , x , paired=TRUE)
@@ -25,7 +25,11 @@ Diketahui nilai statistik dari uji 𝑡 (𝑡) adalah 7,6525, sementara nilai
 probabilitas (p-value) adalah 0,00006003 (atau 6.003e-05).  
 **Bukti**  
 ![1b.png](https://drive.google.com/uc?export=view&id=1p6rvkwgxuThpyv1soP1QxVcqkFdtpHFs)
-**C**  
+**C. Tentukanlah apakah terdapat pengaruh yang signifikan secara statistika
+dalam hal kadar saturasi oksigen , sebelum dan sesudah melakukan
+aktivitas 𝐴 jika diketahui tingkat signifikansi 𝛼 = 5% serta H0 : “tidak ada
+pengaruh yang signifikan secara statistika dalam hal kadar saturasi
+oksigen , sebelum dan sesudah melakukan aktivitas 𝐴”**  
 **Jawab**  
 * Diketahui nilai probabilitas dari uji 𝑡 (p-value) adalah 0,00006003. 
 Karena nilai probabilitas tersebut lebih kecil dibandingkan tingkat signifikansi 𝛼 = 0,05, 
@@ -33,9 +37,10 @@ maka hipotesis nol ditolak dan hipotesis alternatif diterima. Hal ini berarti te
 yang signifikan secara statistika dalam hal jumlah denyut jantung, sebelum dan sesudah 
 mengkonsumsi obat 𝐴 pada tingkat signifikansi 5%.
 ## Soal No 2  
-**A**  
+**A. Apakah Anda setuju dengan klaim tersebut?**  
 **Jawab**  
-**B**  
+* Setuju
+**B. Jelaskan maksud dari output yang dihasilkan!**  
 **Jawab**  
 ```R  
 zsum.test(mean.x=23500, sigma.x = 3900, n.x = 100,  
@@ -45,12 +50,12 @@ zsum.test(mean.x=23500, sigma.x = 3900, n.x = 100,
 **Keterangan**  
 **Bukti**  
 ![2b.png](https://drive.google.com/uc?export=view&id=1dIP2cZrWoj9IEXiLXisHLkVFVIHv1Qag)
-**C**  
+**C. Buatlah kesimpulan berdasarkan P-Value yang dihasilkan!**  
 **Jawab**  
 ## Soal No 3  
-**A**  
+**A. H0 dan H1**  
 **Jawab**  
-**B**  
+**B. Hitung Sampel Statistik**  
 **Jawab**  
 ```R  
 install.packages("BSDA")
@@ -63,7 +68,7 @@ tsum.test(mean.x=3.64, s.x = 1.67, n.x = 19,
 **Keterangan**  
 **Bukti**  
 ![3b.png](https://drive.google.com/uc?export=view&id=1PD4u0iSUk7UqnanVFycZbkDEVnqu1iQm)
-**C**  
+**C. Lakukan Uji Statistik (df =2)**  
 **Jawab**  
 ```R  
 install.packages("mosaic")
@@ -78,7 +83,7 @@ plotDist(dist='t', df=2, col="blue")
 **Bukti**  
 ![3c.png](https://drive.google.com/uc?export=view&id=1pMa_2p8tVNns5yzq1DgQMpjciZggp2QB)  
 
-**D**  
+**D. Nilai Kritikal**  
 **Jawab**  
 ```R  
 qchisq(p = 0.05, df = 2, lower.tail=FALSE)
@@ -88,50 +93,56 @@ qchisq(p = 0.05, df = 2, lower.tail=FALSE)
 **Bukti**  
 ![3d.png](https://drive.google.com/uc?export=view&id=17xj0zievfeVvG5pVHTsW8_Ao8oT5vlNn)  
 
-**E**  
+**E. Keputusan**  
 **Jawab**  
 * Teori keputusan merupakan teori formal yang berfungsi untuk pengambilan keputusan di bawah ketidakpastian. Sebagai contoh aksinya adalah : ```({a}_{a∈A})``` dan kemungkinan konsekuensi : ```({c}_{c∈C})``` ```tergantung pada keadaan dan tindakan```. Maka keputusan dapat dibuat dengan melakukan ```t.test```.  
 
-**F**  
+**F. Kesimpulan**  
 **Jawab**  
 * Kesimpulan Kesimpulan yang didapatkan yaitu perbedaan rata-rata yang terjadi tidak ada jika dilihat dari uji statistik dan akan ada tetapi tidak signifikan jika dipengaruhi nilai kritikal.  
 ## Soal No 4  
-**A**  
+**A. Buatlah masing masing jenis spesies menjadi 3 subjek "Grup" (grup 1,grup
+2,grup 3). Lalu Gambarkan plot kuantil normal untuk setiap kelompok dan
+lihat apakah ada outlier utama dalam homogenitas varians.**  
 **Jawab**  
 ```R  
 
 ```  
 **Keterangan**  
 **Bukti**  
-**B**  
+**B. Carilah atau periksalah Homogeneity of variances nya , Berapa nilai p yang
+didapatkan? , Apa hipotesis dan kesimpulan yang dapat diambil ?**  
 **Jawab**  
 ```R  
 
 ```  
 **Keterangan**  
 **Bukti**  
-**C**  
+**C. Untuk uji ANOVA (satu arah), buatlah model linier dengan Panjang versus
+Grup dan beri nama model tersebut model 1.**  
 **Jawab**  
 ```R  
 
 ```  
 **Keterangan**  
 **Bukti**  
-**D**  
+**D. Dari Hasil Poin C, Berapakah nilai-p ? , Apa yang dapat Anda simpulkan
+dari H0?**  
 **Jawab**  
 ```R  
 
 ```  
 **Keterangan**  
 **Bukti**  
-**E**  
+**E. Verifikasilah jawaban model 1 dengan Post-hoc test Tukey HSD, dari nilai p
+yang didapatkan apakah satu jenis kucing lebih panjang dari yang lain? Jelaskan**  
 **Jawab**  
 ```R  
 
 ```  
 **Keterangan**  
 **Bukti**  
-**F**  
+**F. Visualisasikan data dengan ggplot2**  
 **Jawab**  
 ```R  
 
@@ -139,35 +150,37 @@ qchisq(p = 0.05, df = 2, lower.tail=FALSE)
 **Keterangan**  
 **Bukti**  
 ## Soal No 5  
-**A**  
+**A. Buatlah plot sederhana untuk visualisasi data**  
 **Jawab**  
 ```R  
 
 ```  
 **Keterangan**  
 **Bukti**  
-**B**  
+**B. Lakukan uji ANOVA dua arah**  
 **Jawab**  
 ```R  
 
 ```  
 **Keterangan**  
 **Bukti**  
-**C**  
+**C. Tampilkan tabel dengan mean dan standar deviasi keluaran cahaya untuk
+setiap perlakuan (kombinasi kaca pelat muka dan suhu operasi)**  
 **Jawab**  
 ```R  
 
 ```  
 **Keterangan**  
 **Bukti**  
-**D**  
+**D. Lakukan uji Tukey**  
 **Jawab**  
 ```R  
 
 ```  
 **Keterangan**  
 **Bukti**  
-**E**  
+**E. Gunakan compact letter display untuk menunjukkan perbedaan signifikan
+antara uji Anova dan uji Tukey**  
 **Jawab**  
 ```R  
 
