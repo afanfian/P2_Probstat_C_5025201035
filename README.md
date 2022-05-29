@@ -39,7 +39,7 @@ mengkonsumsi obat 𝐴 pada tingkat signifikansi 5%.
 ## Soal No 2  
 **A. Apakah Anda setuju dengan klaim tersebut?**  
 **Jawab**  
-* Setuju
+* Setuju  
 **B. Jelaskan maksud dari output yang dihasilkan!**  
 **Jawab**  
 ```R  
