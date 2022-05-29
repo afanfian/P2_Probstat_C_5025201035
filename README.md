@@ -139,38 +139,52 @@ group3 <- subset(myFile, Group=="Kucing Putih")
 **B. Carilah atau periksalah Homogeneity of variances nya , Berapa nilai p yang
 didapatkan? , Apa hipotesis dan kesimpulan yang dapat diambil ?**  
 **Jawab**  
+* Mencari ```Homogeneity of variances``` bisa menggunakan syntax sebagai berikut: 
 ```R  
-
+bartlett.test(Length~Group, data=dataoneway)
 ```  
 **Keterangan**  
-**Bukti**  
+* Setelah di jalankan maka nilai p-value = 0.8054. Kesimpulan yang didapatkan yaitu Bartlett's K-squared memiliki nilai sebesar 0.43292 dan df bernilai 2
+
 **C. Untuk uji ANOVA (satu arah), buatlah model linier dengan Panjang versus
 Grup dan beri nama model tersebut model 1.**  
 **Jawab**  
 ```R  
-
+qqnorm(group1$Length)
+qqline(group1$Length)
 ```  
 **Keterangan**  
-**Bukti**  
 **D. Dari Hasil Poin C, Berapakah nilai-p ? , Apa yang dapat Anda simpulkan
 dari H0?**  
-**Jawab** 
+**Jawab**  
+* Mendapatkan nilai ```-p``` atau ```p-value``` sebesar 0.8054.  
 **Keterangan**  
-**Bukti**  
 **E. Verifikasilah jawaban model 1 dengan Post-hoc test Tukey HSD, dari nilai p
 yang didapatkan apakah satu jenis kucing lebih panjang dari yang lain? Jelaskan**  
 **Jawab**  
+* Mendefinisikan ANOVA menggunakan syntax sebagai berikut:  
 ```R  
-
+model1 <- lm(Length~Group, data=myFile)
+```  
+* Menggunakan stntax  
+```R
+anova(model1)
+```  
+* Menggunakan ```Post-hoc Tuckey HSD``` dengan menggunakan syntax sebagai berikut:  
+```R
+TukeyHSD(aov(model1))
 ```  
 **Keterangan**  
 **Bukti**  
 **F. Visualisasikan data dengan ggplot2**  
 **Jawab**  
 ```R  
-
+library(ggplot2)
+ggplot(dataoneway, aes(x = Group, y = Length)) + geom_boxplot(fill = "grey80", colour = "black") + scale_x_discrete() + xlab("Treatment Group") +  ylab("Length (cm)")
 ```  
 **Keterangan**  
+* Menggunakan library ```ggplot2``` terlebih dahulu.  
+* Selanjutnya membuat visualisasi dengan libary diatas.  
 **Bukti**  
 ## Soal No 5  
 **A. Buatlah plot sederhana untuk visualisasi data**  
