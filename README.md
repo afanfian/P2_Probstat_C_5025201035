@@ -116,80 +116,81 @@ qchisq(p = 0.05, df = 2, lower.tail=FALSE)
 2,grup 3). Lalu Gambarkan plot kuantil normal untuk setiap kelompok dan
 lihat apakah ada outlier utama dalam homogenitas varians.**  
 **Jawab**  
-* Mengambil data dari link yang telah disediakan ```https://rstatisticsandresearch.weebly.com/uploads/1/0/2/6/1026585/onewayanova.txt```.  
 ```R  
-myFile  <- read.table(url("https://rstatisticsandresearch.weebly.com/uploads/1/0/2/6/1026585/onewayanova.txt")) 
-dim(myFile)
-head(myFile)
-```  
-* Membuat ```myFile``` secara ```group```.  
-```R
-myFile$Group <- as.factor(myFile$Group)
-myFile$Group = factor(myFile$Group,labels = c("Kucing Oren","Kucing Hitam","Kucing Putih"))
-```  
-* Mengecek apakah program tersebut menyimpan nilai secara ```group```.  
-```R  
-class(myFile$Group)
-```  
-* Membagi valuer menjadi 3 bagian ke dalam 3 ```group```.  
-```R
-group1 <- subset(myFile, Group=="Kucing Oren")
-group2 <- subset(myFile, Group=="Kucing Hitam")
-group3 <- subset(myFile, Group=="Kucing Putih")
+dataoneway <- read.table("onewayanova.txt",h=T)
+attach(dataoneway)
+names(dataoneway)
+
+dataoneway$Group <- as.factor(dataoneway$Group)
+dataoneway$Group = factor(dataoneway$Group,labels = c("Kucing Oren", "Kucing Hitam", "Kucing Putih"))
+
+class(dataoneway$Group)
+
+Group1 <- subset(dataoneway, Group == "Kucing Oren")
+Group2 <- subset(dataoneway, Group == "Kucing Hitam")
+Group3 <- subset(dataoneway, Group == "Kucing Putih")
+
+qqnorm(Group1$Length)
+qqline(Group1$Length)
+
+qqnorm(Group2$Length)
+qqline(Group2$Length)
+
+qqnorm(Group2$Length)
+qqline(Group2$Length)
 ```  
 **Bukti**  
-![4a.png](https://drive.google.com/uc?export=view&id=1xdf19X_WGv1IqmSFIiR3CUjqSP1e1sVX)  
+![4a.png](https://drive.google.com/uc?export=view&id=1j0eDEpsEMcKKRzdLaC9MYetiv-nHGsPC)  
 **B. Carilah atau periksalah Homogeneity of variances nya , Berapa nilai p yang
 didapatkan? , Apa hipotesis dan kesimpulan yang dapat diambil ?**  
 **Jawab**  
-* Mencari ```Homogeneity of variances``` bisa menggunakan syntax sebagai berikut: 
 ```R  
-bartlett.test(Length~Group, data=dataoneway)
+bartlett.test(Length ~ Group, data = dataoneway)
 ```  
 **Keterangan**  
-* Setelah di jalankan maka nilai p-value = 0.8054. Kesimpulan yang didapatkan yaitu Bartlett's K-squared memiliki nilai sebesar 0.43292 dan df bernilai 2
-
+**Bukti**  
+![4b.png](https://drive.google.com/uc?export=view&id=1jFPTGqQ95700mz5_7q2ByfLcoQ0h2eD9)  
 **C. Untuk uji ANOVA (satu arah), buatlah model linier dengan Panjang versus
 Grup dan beri nama model tersebut model 1.**  
 **Jawab**  
 ```R  
-qqnorm(group1$Length)
-qqline(group1$Length)
+model1 = lm(Length ~ Group, data = dataoneway)
+anova(model1)
 ```  
 **Keterangan**  
+**Bukti**  
+![4c1.png](https://drive.google.com/uc?export=view&id=1FyWjdytdE6EB2iLwfVpTPz3uCmwEauZV)  
+![4c2.png](https://drive.google.com/uc?export=view&id=1Exq7wSI_zW_iIQTdx1ybbcnIuPKWIhVX)  
 **D. Dari Hasil Poin C, Berapakah nilai-p ? , Apa yang dapat Anda simpulkan
 dari H0?**  
 **Jawab**  
-* Mendapatkan nilai ```-p``` atau ```p-value``` sebesar 0.8054.  
-
-**Keterangan**  
-**E. Verifikasilah jawaban model 1 dengan Post-hoc test Tukey HSD, dari nilai p
-yang didapatkan apakah satu jenis kucing lebih panjang dari yang lain? Jelaskan**  
-**Jawab**  
-* Mendefinisikan ANOVA menggunakan syntax sebagai berikut:  
-```R  
-model1 <- lm(Length~Group, data=myFile)
-```  
-* Menggunakan stntax  
-```R
-anova(model1)
-```  
-* Menggunakan ```Post-hoc Tuckey HSD``` dengan menggunakan syntax sebagai berikut:  
 ```R
 TukeyHSD(aov(model1))
 ```  
 **Keterangan**  
 **Bukti**  
+![4d.png](https://drive.google.com/uc?export=view&id=1yecpZxMzSQsHskk3cclxk1crFhooTOHY)  
+**E. Verifikasilah jawaban model 1 dengan Post-hoc test Tukey HSD, dari nilai p
+yang didapatkan apakah satu jenis kucing lebih panjang dari yang lain? Jelaskan**  
 **F. Visualisasikan data dengan ggplot2**  
 **Jawab**  
 ```R  
-library(ggplot2)
-ggplot(dataoneway, aes(x = Group, y = Length)) + geom_boxplot(fill = "grey80", colour = "black") + scale_x_discrete() + xlab("Treatment Group") +  ylab("Length (cm)")
+# E & F
+install.packages("ggplot2")
+library("ggplot2")
+
+ggplot(dataoneway, aes(x = Group, y = Length)) +
+  geom_boxplot(fill = "grey80", colour = "black") +
+  scale_x_discrete() + xlab("Treatment Group") +
+  ylab("Length (cm)")
 ```  
 **Keterangan**  
-* Menggunakan library ```ggplot2``` terlebih dahulu.  
-* Selanjutnya membuat visualisasi dengan libary diatas.  
+* Install terlebih dahulu ```ggplot2```.  
+* Setelah menginstall, definisikan library ```ggplot2```.  
+* Masukkan Visualisasi data dan model 1.  
+
 **Bukti**  
+![4e.png](https://drive.google.com/uc?export=view&id=1nhpbl0ys2WZ3JbvoeHcQ8V4qPV2QGuy)  
 ## Soal No 5  
 **A. Buatlah plot sederhana untuk visualisasi data**  
 **Jawab**  
