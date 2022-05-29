@@ -2,6 +2,7 @@
 | Nama  | NRP |
 |:-------------:| :-----:|
 | Fian Awamiry Maulana | 5025201035 |
+**Note: Jika gambar tidak muncul saat reload, bisa melihat pada folder dokumentasi** 
 ## Soal No 1  
 **A. Kesimpulan Kesimpulan yang didapatkan yaitu perbedaan rata-rata yang terjadi tidak ada jika dilihat dari uji statistik dan akan ada tetapi tidak signifikan jika dipengaruhi nilai kritikal.**  
 **Jawab**  
@@ -40,6 +41,7 @@ mengkonsumsi obat 𝐴 pada tingkat signifikansi 5%.
 **A. Apakah Anda setuju dengan klaim tersebut?**  
 **Jawab**  
 * Setuju  
+
 **B. Jelaskan maksud dari output yang dihasilkan!**  
 **Jawab**  
 ```R  
