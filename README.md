@@ -56,6 +56,7 @@ zsum.test(mean.x=23500, sigma.x = 3900, n.x = 100,
 **C. Buatlah kesimpulan berdasarkan P-Value yang dihasilkan!**  
 **Jawab**  
 * Kesimpulan yang didapat adalah bahwa mobil dikemudikan rata-rata lebih dari 20.000 kilometer per tahun.  
+
 **Bukti**
 ![2c.jpg](https://drive.google.com/uc?export=view&id=1AulpLUXyy0YI-ybml67iB966p1XHjJ0W)
 ## Soal No 3  
