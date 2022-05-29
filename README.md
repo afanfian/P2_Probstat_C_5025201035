@@ -216,8 +216,8 @@ print(data_summary)
 ![5C.png](https://drive.google.com/uc?export=view&id=1qJmRfw8KhR0YTuSEBc0d8qzFk7pGSRkQ)  
 
 **D. Lakukan uji Tukey** 
-* Menggunakan fungsi ```TukeyHSD``` sebagai berikut:  
 **Jawab**  
+* Menggunakan fungsi ```TukeyHSD``` sebagai berikut:   
 ```R  
 tukey <- TukeyHSD(anova)
 print(tukey)
