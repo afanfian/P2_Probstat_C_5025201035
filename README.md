@@ -225,7 +225,8 @@ print(tukey)
 **Keterangan**  
 * Menggunakan fungsi ```TukeyHSD``` dan mengeprint ```tukey```.  
 **Bukti**  
-![5d.png](https://drive.google.com/uc?export=view&id=1xWx9nCvacIXkJkI7bkHGTxJMsRcCeWoa)
+![5d.png](https://drive.google.com/uc?export=view&id=1xWx9nCvacIXkJkI7bkHGTxJMsRcCeWoa)  
+
 **E. Gunakan compact letter display untuk menunjukkan perbedaan signifikan
 antara uji Anova dan uji Tukey**  
 **Jawab**  
